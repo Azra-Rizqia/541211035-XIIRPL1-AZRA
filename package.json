@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/azraRizqia/541211035-xiirpl1-azra.git"
+    "url": "git+https://gitlab.com/azraRizqia/541211035-xiirpl1-azra.git"
   },
   "author": "azra",
   "license": "ISC",
