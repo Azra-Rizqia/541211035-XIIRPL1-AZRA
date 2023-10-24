@@ -1,0 +1,22 @@
+{
+  "name": "express-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/azraRizqia/541211035-xiirpl1-azra.git"
+  },
+  "author": "azra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/azraRizqia/541211035-xiirpl1-azra/issues"
+  },
+  "homepage": "https://gitlab.com/azraRizqia/541211035-xiirpl1-azra#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
