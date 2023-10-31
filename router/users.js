@@ -1,26 +1,36 @@
 const express = require('express')
 const router = express.Router()
 
-const users = [
+let users = [
     {id: 1, nama: "Azra", email: "azra@gmail.com" },
     {id: 2, nama: "Rizqia", email: "rizqia@gmail.com" },
 ]
 
-router.get('/users', (req, res) => {
+router.get('/user', (req, res) => {
   res.json(users)
 })
 
-router.post('/users', (req, res) => {
+router.post('/user', (req, res) => {
   users.push(req.body)
   res.json(users)
 })
 
-router.put('/users/:id', (req, res) => {
-  res.send('Got a update user')
+router.put('/user/:id', (req, res) => {
+  const id = req.params.id
+  users.filter(user => {
+    if(user.id == id){
+        user.nama = req.body.nama
+        user.email = req.body.email
+        return user
+    }
+  })
+  res.json(users)
 })
 
-router.delete('/users/:id', (req, res) => {
-  res.send('Got a delete user')
+router.delete('/user/:id', (req, res) => {
+  const id = req.params.id
+  users = users.filter(user => user.id != id)
+  res.json(users)
 })
 
 module.exports = router
