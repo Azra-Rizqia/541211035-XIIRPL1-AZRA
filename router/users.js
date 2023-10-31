@@ -1,8 +1,13 @@
 const express = require('express')
 const router = express.Router()
 
+const users = [
+    {id: 1, nama: "Azra", email: "azra@gmail.com" },
+    {id: 2, nama: "Rizqia", email: "rizqia@gmail.com" },
+]
+
 router.get('/users', (req, res) => {
-  res.send('Get All user')
+  res.json(users)
 })
 
 router.post('/users', (req, res) => {
