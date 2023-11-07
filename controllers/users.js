@@ -1,6 +1,7 @@
 const User = require('../models/user')
 
 module.exports = {
+    //method get all
     index: async (req, res) => {
         try {
             const users = await User.find()
@@ -21,6 +22,8 @@ module.exports = {
             res.status(400).json({ sucess: false })
         }
     },
+    
+    //method get by id
     show: async (req, res) => {
         try {
             const user = await User.findById(req.params.id)
@@ -35,6 +38,8 @@ module.exports = {
             res.status(400).json({ sucess: false })
         }
     },
+
+    //method post
     store: async (req, res) => {
         try {
             const user = await User.create(req.body)
@@ -49,6 +54,8 @@ module.exports = {
             res.status(400).json({ sucess: false })
         }
     },
+
+    //method put
     update: async (req, res) => {
         try {
             const user = await User.findByIdAndUpdate(req.params.id, req.body, {
@@ -66,6 +73,8 @@ module.exports = {
             res.status(400).json({ sucess: false })
         }
     },
+
+    //method delete
     delete: async (req, res) => {
         try {
             await User.findByIdAndDelete(req.params.id)
